@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "etl-gen"
+version = "0.1.12"
+description = ""
+authors = ["realdengziqi <993396365@qq.com>"]
+readme = "README.md"
+packages = [{include = "etl_gen"} ]
+
+[tool.poetry.scripts]
+etl-gen = "etl_gen.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+typer = {extras = ["all"], version = "^0.7.0"}
+kafka-python = "^2.0.2"
+faker = "^15.3.3"
+
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
+
+
+#[[tool.poetry.source]]
+#name = "aliyun"
+#url = "https://mirrors.aliyun.com/pypi/simple/"
+#default = true
